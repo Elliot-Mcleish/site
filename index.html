@@ -1,96 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Elliot McLeish - CV</title>
+        <title>Elliot McLeish</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="icon" href="favicon.ico">
-        <script>
-            function navigate(e = new PointerEvent){
-                let a = e.composedPath()[0];
-                let h = document.querySelector(a.getAttribute("href"));
-                if(!h) return;
-                let box = h.getBoundingClientRect();
-                e.preventDefault();
-                window.scrollBy({top:box.top - 100, behavior:"smooth"});
-            }
-
-            function assignListeners(){
-                const NavElements = document.querySelectorAll('a[href^="#"]');
-                NavElements.forEach(a => {
-                    a.addEventListener("click", navigate);
-                });
-            }
-
-            let lastScrollY = 0;
-
-            window.addEventListener("scroll", e => {
-                let nav = document.querySelector("nav");
-                if(lastScrollY-window.scrollY > 0){
-                    nav.removeAttribute("hidden");
-                }else{
-                    nav.setAttribute("hidden", true);
-                }
-                lastScrollY = window.scrollY;
-            })
-
-            window.addEventListener("DOMContentLoaded", assignListeners);
-        </script>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#previous-education">Previous Education</a></li>
-                <li><a href="#work-experience">Work Experience</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#outward-bound">Outward Bound</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact-details">Contact Details</a></li>
-            </ul>
-        </nav>
         <section>
-            <h1>Elliot M<sup>c</sup>Leish</h1>
-            <h3 id="about-me">About Me</h3>
-            <img src="images/me.jpg" style="height:25rem;">
-            <p>My full name is Elliot Grant McLeish</p>
-            <p>I’m 19 years old, I like music, computer programming, philosophical conversations, swimming, running, camping, and working with others toward a common goal. However, I feel overwhelmed in large crowds.<br>I’m a Christian, which means I believe in showing love to everyone, regardless of their beliefs, or what they think of me.</p>
-            <p>I grew up on my grandparent’s farm in Drummond, with my parents and 6 siblings. I’m the middle child: I have two older sisters and one older brother, two younger brothers and one younger sister.<br>We were home-schooled, and were each given housework and household management chores. We were all brought up to be comfortable having conversations with people much older or younger than us, and to be quick to resolve disputes, so that we never had lingering resentment between us.</p>
-            <p>I now live at 284 West Plains Road, RD4 Invercargill.</p>
-
-            <h3 id="previous-education">Previous Education</h3>
-            <p>Because I was home-schooled, I have not done NCEA, and have no official qualifications. The way my education worked was very conversation-based, with Mum or Dad reading aloud from a book to the whole family, and we would discuss it, throwing ideas back and forth. We would also have conversations after watching movies, or documentaries.</p>
-            <p>For maths and science, we each worked independently on courses online, or in textbooks: Khan Academy for maths, and Apologia textbooks for science. English, history, and geography were all group-learning subjects. Often Mum and Dad would be learning things with us.</p>
-            <p>I started learning computer programming when I was about 10. I started with Visual Basic in Microsoft Excel, and eventually managed to create minesweeper within a workbook. After that, I started learning programming on Khan Academy with their JavaScript, HTML, and CSS courses.</p>
-            <p>Since then, I’ve taught myself much more about web development through looking things up on the internet. I’ve learned how to use Node.js, and have read Bjarne Stroustrup’s <a href="https://www.stroustrup.com/programming.html" rel="noopener noreferrer" target="_blank">book on C++ ↗</a>, but have done little practical programming with the language.</p>
-            <p>I officially finished home-schooling at the end of 2021, but continue to actively learn and investigate various subjects.</p>
-
-            <h3 id="work-experience">Work Experience</h3>
-            <p>I worked for a gardening company from January 25<sup>th</sup> until May 10<sup>th</sup> 2022, mowing lawns, trimming hedges, raking leaves, weeding, digging, and pruning. I enjoyed the routine of having a job and the physical nature of the work.<br>When everything stopped growing over the winter, there wasn’t enough work for me to be helpful, so I switched to helping my parents in their garden: trench digging, hoeing, harvesting potatoes, removing sods to make new planting ground, building fences, and trimming some of our many bushes.</p>
-
-            <h3 id="hobbies">Hobbies</h3>
-            <p>I love music: playing the piano and singing. We regularly sing as a whole family. I also play the piano in our church.</p>
-            <p>I enjoy computer programming: I mostly build web applications with Node.js, HTML, JavaScript, and CSS, but I can also do some basics in C++.</p>
-            <p>I’m always happy to go on walking trips, or 4WD trips, preferably out in the bush, or up a mountain, or around a lake. I really enjoy camping, when I get the chance.</p>
-
-            <img src="images/OB_Certificate.jpg" style="height:50rem;">
-            <h3 id="outward-bound" style="width:28rem;">Outward Bound</h3>
-            <p>In September of 2021, I went on a 21-day Outward Bound course in Anakiwa, near Picton. I was in a watch with 12 other teenagers. None of us had met before, but we got to know each other very well during the course.</p>
-            <p>I learned that I enjoy being part of a team, but I disliked leading, because I didn’t want to impose myself on others.</p>
-            <p>We did kayaking, sailing, waka ama, rock climbing, high ropes, hiking, and camping. It was all a lot of fun!</p>
-            <p>Every morning, there was an exercise routine, followed by a cold shower. I participated in a half-marathon, completing it in 2 hours and 11 minutes, while wearing a mask.</p>
-
-            <h3 id="skills" style="width:28rem;">Skills</h3>
-            <p>Driving: I have a full driver’s licence, but no car yet.</p>
-            <p>Programming: JavaScript, HTML, CSS, Node.js, SQL. (Web Development)</p>
-            <p>Handy with a spade, fork, rake, lawn mower, and hedge trimmer.</p>
-            <p>Sports: swimming (confident), skiing (intermediate), extended walking / running.</p>
-            <p>Music: I can play the piano, and have medium singing ability.</p>
-
-            <h3 id="contact-details">Contact Details:</h3>
-            <p>Email: elliot.mcleish@gmail.com</p>
-            <p>Mobile Ph: 02 04 0888 543</p>
-            <p>Address: 284 West Plains Road, RD4 Invercargill</p>
+            <p><a href="cv.html">My CV</a></p>
         </section>
     </body>
 </html>
