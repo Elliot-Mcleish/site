@@ -66,15 +66,22 @@ nav{
 
 nav[hidden]{
     display:block;
-    top:-4rem;
+    top:-100%;
 }
 
 nav ul{
     display:flex;
+    flex-wrap:wrap;
     justify-content: space-evenly;
-    gap:1rem;
-    list-style: none;
     padding:0px;
+    gap:1rem;
+    padding-inline:1rem;
+    list-style: none;
+    box-sizing:border-box;
+}
+
+nav li{
+    white-space: nowrap;
 }
 
 nav a{
